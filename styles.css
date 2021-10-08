@@ -1,0 +1,50 @@
+*{
+  margin: 0px 0px;
+  padding: 0px 0px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card {
+  background: #E5E4E2;
+}
+header{
+  display: flex;
+  justify-content:  space-between;
+  margin: 10px;
+}
+.header_logo{
+  font-size: 20px;
+  color: #363636;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+#myTopnav a{
+  color: #363636;
+}
+.intro{
+  color: #777777;
+  background-image: url(https://cdn.pixabay.com/photo/2015/12/08/00/26/desk-1081708_1280.jpg);
+  background-size: 100%;
+  background-position: top;
+  height: 400px;
+  padding: 5% 15%;
+}
+.intro p{
+  font-size: 15px;
+  font-weight: 600;
+  text-align: start;
+}
+.intro h2{
+  color: #dfb729;
+  padding-top: 20%;
+  font-size: 40px;
+  letter-spacing: 6px;
+}
+footer{
+  background-color: #293133;
+  height: 50px;
+  width: 100%;
+}
