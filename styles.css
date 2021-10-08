@@ -9,7 +9,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 header{
   display: flex;
   justify-content:  space-between;
-  margin: 20px;
+  margin: 20px 15%;
 }
 .header_logo{
   font-size: 20px;
@@ -17,6 +17,7 @@ header{
 }
 a {
   text-decoration: none;
+  margin-right: 20px;
 }
 li {
   list-style: none;
@@ -30,12 +31,12 @@ li {
   background-size: cover;
   background-position: center;
   height: 450px;
-  padding: 5% 15%;
+  padding: 4% 18%;
   background-repeat: no-repeat;
 }
 .intro p{
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   text-align: start;
   line-height: 2;
 }
