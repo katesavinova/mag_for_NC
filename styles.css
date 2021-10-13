@@ -94,7 +94,70 @@ li {
   font-size: 40px;
   letter-spacing: 6px;
 }
-
+/*popup start*/
+.popup-bg{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #2931336b;
+  width: 100%;
+  height: 100%;
+}
+.popup{
+  position: absolute;
+  background: #ffffff;
+  box-shadow: 0  0 10px rgba(167, 167, 167, 0.288);
+  width: 50%; 
+  height: 85%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2% 5%;
+}
+.popup-top{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  color: #dfb729;
+  line-height: 1.5;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+.popup-list{
+  font-size: 20px;
+  color: #363636;
+  line-height: 2.5;
+  overflow: scroll;
+  height: 75%;
+}
+.popup-list ul li{
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
+  background-color: #cfcfcf23;
+  border-radius: 10px;
+  padding: 5px;
+}
+.popup-list ul li span{
+  color: #dfb729;
+  font-size: 18px;
+}
+.popup-list-btn{
+  width: 100%;
+  height: 10%;
+  margin: 5% 0;
+  border-radius: 7px;
+  border : 3px solid #dfb729;
+  background-color: #ffffff;
+  color: #dfb729;
+  font-size: 30px;
+}
+.popup-list-btn:hover{
+background-color: #dfb729;
+color: #ffffff;
+}
+/*popup end*/
 footer{
   padding-top: 3%;
   background-color: #293133;
@@ -106,8 +169,7 @@ footer div{
   display: flex;
   justify-content:  space-between;
   margin: auto 15%;
- 
-}
+ }
 footer p{
   color: #dfb729;
 }
