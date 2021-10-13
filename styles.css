@@ -9,11 +9,11 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   justify-content:  center;
   flex-direction: column;
 }
-.row_one{
+.row-one{
   display: flex;
   flex-direction: row;
 }
-.row_two{
+.row-two{
   display: flex;
   flex-direction: row;
 }
@@ -25,24 +25,24 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 20px;
   padding: 30px;
 }
-.card_img img{
+.card-img img{
   width: 100%;
   height: 250px;
 }
-.card_info{
+.card-info{
   font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.card_info_price{
+.card-info-price{
   margin-top: 20px;
   font-size: 15px;
   color: #777777;
   display: flex;
   justify-content: space-between;
 }
-.card_info_btn{
+.card-info-btn{
   width: 100%;
   height: 35px;
   margin:10% 0;
@@ -58,7 +58,7 @@ header{
   justify-content:  space-between;
   margin: 20px 15%;
 }
-.header_logo{
+.header-logo{
   font-size: 20px;
   color: #363636;
 }
