@@ -1,64 +1,58 @@
-*{
+* {
   margin: 0px 0px;
   padding: 0px 0px;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.cards{
-  margin: auto 10%;
-  display: flex;
-  justify-content:  center;
-  flex-direction: column;
+.cards {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  margin: 5% 10%;
 }
-.row-one{
-  display: flex;
-  flex-direction: row;
-}
-.row-two{
-  display: flex;
-  flex-direction: row;
-}
+
 .card {
   background: #f3f3f2;
   box-shadow: 0 0 10px rgba(167, 167, 167, 0.5);
-  width: 30%;
-  height: 370px;
+  width: 50%;
+  height: auto;
   margin: 20px;
-  padding: 30px;
+  padding: 20px;
 }
-.card-img img{
+.card-img img {
   width: 100%;
   height: 250px;
 }
-.card-info{
+.card-info {
   font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.card-info-price{
+.card-info-price {
   margin-top: 20px;
   font-size: 15px;
   color: #777777;
   display: flex;
   justify-content: space-between;
 }
-.card-info-btn{
+.card-info-btn {
   width: 100%;
-  height: 35px;
-  margin:10% 0;
+  height: auto;
+  margin: 10% 0;
+  padding: 3%;
   border-radius: 7px;
-  box-shadow: 0  0 10px rgba(167, 167, 167, 0.5);
+  box-shadow: 0 0 10px rgba(167, 167, 167, 0.5);
   border-width: 0ch;
   background-color: #dfb729;
   color: wheat;
   font-size: 20px;
 }
-header{
+header {
   display: flex;
-  justify-content:  space-between;
+  justify-content: space-between;
   margin: 20px 15%;
 }
-.header-logo{
+.header-logo {
   font-size: 20px;
   color: #363636;
 }
@@ -70,10 +64,10 @@ li {
   list-style: none;
 }
 
-#myTopnav a{
+#myTopnav a {
   color: #363636;
 }
-.intro{
+.intro {
   color: #777777;
   background-image: url(https://cdn.pixabay.com/photo/2015/12/08/00/26/desk-1081708_1280.jpg);
   background-size: cover;
@@ -82,20 +76,20 @@ li {
   padding: 4% 18%;
   background-repeat: no-repeat;
 }
-.intro p{
+.intro p {
   font-size: 20px;
   font-weight: 400;
   text-align: start;
   line-height: 2;
 }
-.intro h2{
+.intro h2 {
   color: #dfb729;
   padding-top: 20%;
   font-size: 40px;
   letter-spacing: 6px;
 }
 /*popup start*/
-.popup-bg{
+.popup-bg {
   display: none;
   position: fixed;
   top: 0;
@@ -104,18 +98,18 @@ li {
   width: 100%;
   height: 100%;
 }
-.popup{
+.popup {
   position: absolute;
   background: #ffffff;
-  box-shadow: 0  0 10px rgba(167, 167, 167, 0.288);
-  width: 50%; 
+  box-shadow: 0 0 10px rgba(167, 167, 167, 0.288);
+  width: 50%;
   height: 85%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 2% 5%;
 }
-.popup-top{
+.popup-top {
   display: flex;
   justify-content: space-between;
   padding-left: 5%;
@@ -124,14 +118,14 @@ li {
   font-size: 30px;
   letter-spacing: 3px;
 }
-.popup-list{
+.popup-list {
   font-size: 20px;
   color: #363636;
   line-height: 2.5;
   overflow: scroll;
   height: 75%;
 }
-.popup-list ul li{
+.popup-list ul li {
   display: flex;
   justify-content: space-between;
   margin: 5%;
@@ -139,40 +133,40 @@ li {
   border-radius: 10px;
   padding: 5px;
 }
-.popup-list ul li span{
+.popup-list ul li span {
   color: #dfb729;
   font-size: 18px;
 }
-.popup-list-btn{
+.popup-list-btn {
   width: 100%;
   height: 10%;
   margin: 5% 0;
   border-radius: 7px;
-  border : 3px solid #dfb729;
+  border: 3px solid #dfb729;
   background-color: #ffffff;
   color: #dfb729;
   font-size: 30px;
 }
-.popup-list-btn:hover{
-background-color: #dfb729;
-color: #ffffff;
+.popup-list-btn:hover {
+  background-color: #dfb729;
+  color: #ffffff;
 }
 /*popup end*/
-footer{
+footer {
   padding-top: 3%;
   background-color: #293133;
   height: 50px;
   width: 100%;
   font-size: 25px;
 }
-footer div{
+footer div {
   display: flex;
-  justify-content:  space-between;
+  justify-content: space-between;
   margin: auto 15%;
- }
-footer p{
+}
+footer p {
   color: #dfb729;
 }
-footer a{
+footer a {
   color: white;
 }
