@@ -90,7 +90,7 @@ li {
 }
 /*popup start*/
 .popup-bg {
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -123,7 +123,7 @@ li {
   overflow: scroll;
   height: 75%;
 }
-.popup-list ul li {
+.popup-list ul {
   display: flex;
   justify-content: space-between;
   margin: 5%;
@@ -131,7 +131,7 @@ li {
   border-radius: 10px;
   padding: 5px;
 }
-.popup-list ul li span {
+.popUp-price{
   color: #dfb729;
   font-size: 18px;
 }

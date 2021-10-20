@@ -36,216 +36,26 @@
         </div>
       </section>
       <section class="cards">
+      <template id="card-temp">
         <div class="card">
+       
           <div class="card-img">
-            <img
-              src="https://cdn.pixabay.com/photo/2018/07/15/17/43/the-brew-kettle-3540132_1280.png"
-              alt="Чайник"
-            />
+            <img class="card-img-src" src=""/>
           </div>
           <div class="card-info">
-            <p>Чайник классический</p>
-            <div class="card-info-price">
-              <p>Цена</p>
-              <p style="color: #dfb729">2990 &#8381;</p>
-            </div>
-            <button class="card-info-btn">Добавить в корзину</button>
+              <p class="card-title"></p>
+              <div class="card-info-price">
+                <p class="price-title"></p>
+                <p class="price-title-price" style="color: #dfb729"></p>
+              </div>
+              <button class="card-info-btn"></button>
+           </template>
           </div>
         </div>
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320603_1280.png"
-              alt="Лампа"
-            />
-          </div>
-          <div class="card-info">
-            <p>Лампа настольная</p>
-            <div class="card-info-price">
-              <p>Цена</p>
-              <p style="color: #dfb729">10790 &#8381;</p>
-            </div>
-          </div>
-          <button class="card-info-btn">Добавить в корзину</button>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://cdn.pixabay.com/photo/2020/06/17/12/59/vase-5309392_1280.png"
-              alt="Ваза"
-              style="width: 100%; height: 190px; margin-bottom: 50px"
-            />
-          </div>
-          <div class="card-info">
-            <p>Ваза</p>
-            <div class="card-info-price">
-              <p>Цена</p>
-              <p style="color: #dfb729">21990 &#8381;</p>
-            </div>
-          </div>
-          <button class="card-info-btn">Добавить в корзину</button>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320604_1280.png"
-              alt="Лампа"
-            />
-          </div>
-          <div class="card-info">
-            <p>Торшер</p>
-            <div class="card-info-price">
-              <p>Цена</p>
-              <p style="color: #dfb729">21990 &#8381;</p>
-            </div>
-          </div>
-          <button class="card-info-btn">Добавить в корзину</button>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://cdn.pixabay.com/photo/2017/09/26/21/28/folding-chair-2790167_1280.png"
-              alt="Табурет"
-            />
-          </div>
-          <div class="card-info">
-            <p>Табурет</p>
-            <div class="card-info-price">
-              <p>Цена</p>
-              <p style="color: #dfb729">7990 &#8381;</p>
-            </div>
-          </div>
-          <button class="card-info-btn">Добавить в корзину</button>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://cdn.pixabay.com/photo/2017/01/18/15/27/milk-can-1990081_1280.png"
-              alt="Банка"
-              style="width: 100%; height: 190px; margin-bottom: 60px"
-            />
-          </div>
-          <div class="card-info">
-            <p>Банка декоративная</p>
-            <div class="card-info-price">
-              <p>Цена</p>
-              <p style="color: #dfb729">17490 &#8381;</p>
-            </div>
-          </div>
-          <button class="card-info-btn">Добавить в корзину</button>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://cdn.pixabay.com/photo/2017/07/24/23/58/chest-2536477_1280.png"
-              alt="Шкатулка декоротивная"
-            />
-          </div>
-          <div class="card-info">
-            <p>Шкатулка декоротивная</p>
-            <div class="card-info-price">
-              <p>Цена</p>
-              <p style="color: #dfb729">6990 &#8381;</p>
-            </div>
-          </div>
-          <button class="card-info-btn">Добавить в корзину</button>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-            <img
-              src="https://cdn.pixabay.com/photo/2019/10/19/17/20/daybed-4561819_1280.png"
-              alt="Балдахин"
-            />
-          </div>
-          <div class="card-info">
-            <p>Балдахин</p>
-            <div class="card-info-price">
-              <p>Цена</p>
-              <p style="color: #dfb729">11490 &#8381;</p>
-            </div>
-          </div>
-          <button class="card-info-btn">Добавить в корзину</button>
-        </div>
+       
       </section>
-      <section class="popUp-section">
-        <div class="popup-bg" id="popup-block">
-          <div class="popup">
-            <div class="popup-top">
-              <h3>Корзина</h3>
-              <span
-                id="popup-close"
-                onclick="click_close_menu_basket()"
-                style="cursor: pointer"
-                >&#9746;</span
-              >
-            </div>
-            <div class="popup-list">
-              <ul>
-                <li class="popup-list-name">
-                  Подушка текстильная<span class="popup-list-price"
-                    >6990 &#8381;</span
-                  >
-                </li>
-                <li class="popup-list-name">
-                  Плед<span class="popup-list-price">4690 &#8381;</span>
-                </li>
-                <li class="popup-list-name">
-                  Свеча в стекле<span class="popup-list-price"
-                    >1990 &#8381;</span
-                  >
-                </li>
-                <li class="popup-list-name">
-                  Горшок для комнатных растений<span class="popup-list-price"
-                    >3190 &#8381;</span
-                  >
-                </li>
-                <li class="popup-list-name">
-                  Рамка для фотографии<span class="popup-list-price"
-                    >2190 &#8381;</span
-                  >
-                </li>
-                <li class="popup-list-name">
-                  Игрушка текстильная<span class="popup-list-price"
-                    >1990 &#8381;</span
-                  >
-                </li>
-                <li class="popup-list-name">
-                  Подушка текстильная<span class="popup-list-price"
-                    >6990 &#8381;</span
-                  >
-                </li>
-                <li class="popup-list-name">
-                  Плед<span class="popup-list-price">4690 &#8381;</span>
-                </li>
-                <li class="popup-list-name">
-                  Свеча в стекле<span class="popup-list-price"
-                    >1990 &#8381;</span
-                  >
-                </li>
-                <li class="popup-list-name">
-                  Горшок для комнатных растений<span class="popup-list-price"
-                    >3190 &#8381;</span
-                  >
-                </li>
-                <li class="popup-list-name">
-                  Рамка для фотографии<span class="popup-list-price"
-                    >2190 &#8381;</span
-                  >
-                </li>
-                <li class="popup-list-name">
-                  Игрушка текстильная<span class="popup-list-price"
-                    >1990 &#8381;</span
-                  >
-                </li>
-              </ul>
-            </div>
-            <button class="popup-list-btn">Купить</button>
-          </div>
-        </div>
+      <section class="popUp-section" id="popUp-part">
+        
       </section>
     </main>
     <footer>
