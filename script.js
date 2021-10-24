@@ -1,85 +1,104 @@
-const dataCards = [
-  {
-    src: 'https://cdn.pixabay.com/photo/2018/07/15/17/43/the-brew-kettle-3540132_1280.png',
-    name: 'Чайник классический',
-    titlePrice: 'Цена',
-    price: '2999₽',
-    button: 'Добавить в корзину',
-    buy: false,
-  },
-  {
-    src: 'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320603_1280.png',
-    name: 'Лампа настольная',
-    titlePrice: 'Цена',
-    price: '7799₽',
-    button: 'Добавить в корзину',
-    buy: false,
-  },
-  {
-    src: 'https://cdn.pixabay.com/photo/2020/06/17/12/59/vase-5309392_1280.png',
-    name: 'Ваза',
-    titlePrice: 'Цена',
-    price: '4699₽',
-    button: 'Добавить в корзину',
-    buy: false,
-  },
-  {
-    src: 'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320604_1280.png',
-    name: 'Торшер',
-    titlePrice: 'Цена',
-    price: '1599₽',
-    button: 'Добавить в корзину',
-    buy: false,
-  },
-  {
-    src: 'https://cdn.pixabay.com/photo/2017/09/26/21/28/folding-chair-2790167_1280.png',
-    name: 'Табурет',
-    titlePrice: 'Цена',
-    price: '8799₽',
-    button: 'Добавить в корзину',
-    buy: false,
-  },
-  {
-    src: 'https://cdn.pixabay.com/photo/2017/01/18/15/27/milk-can-1990081_1280.png',
-    name: 'Банка декоративная',
-    titlePrice: 'Цена',
-    price: '1399₽',
-    button: 'Добавить в корзину',
-    buy: false,
-  },
-  {
-    src: 'https://cdn.pixabay.com/photo/2017/07/24/23/58/chest-2536477_1280.png',
-    name: 'Шкатулка',
-    titlePrice: 'Цена',
-    price: '2099₽',
-    button: 'Добавить в корзину',
-    buy: false,
-  },
-  {
-    src: 'https://cdn.pixabay.com/photo/2019/10/19/17/20/daybed-4561819_1280.png',
-    name: 'Балдахин',
-    titlePrice: 'Цена',
-    price: '12999₽',
-    button: 'Добавить в корзину',
-    buy: false,
-  },
-];
-dataCards.forEach((temp) => {
-  const cardInfo = document.querySelector('.cards');
-  const template = document.querySelector('#card-temp');
-  const newCard = template.content.cloneNode(true);
-  const fieldImg = newCard.querySelector('.card-img-src');
-  const field1 = newCard.querySelector('.card-title');
-  const field2 = newCard.querySelector('.price-title');
-  const field3 = newCard.querySelector('.price-title-price');
-  const field4 = newCard.querySelector('.card-info-btn');
-  field1.textContent = temp.name;
-  field2.textContent = temp.titlePrice;
-  field3.textContent = temp.price;
-  field4.textContent = temp.button;
-  fieldImg.src = temp.src;
-  cardInfo.appendChild(newCard);
-});
+const appNode = document.querySelector('.cards');
+
+const cartNode = document.querySelector('.popup-list');
+
+class Card {
+  constructor(product) {
+    const template = document.getElementById('card-temp');
+    const content = document.importNode(template.content, true);
+
+    this.imgSrc = content.querySelector('.card-img-src');
+    this.name = content.querySelector('.card-title');
+    this.priceTitle = content.querySelector('.price-title');
+    this.price = content.querySelector('.price-title-price');
+    this.addButton = content.querySelector('.card-info-btn');
+
+    this.imgSrc.src = product.imgSrc;
+    this.priceTitle.innerHTML = product.priceTitle;
+    this.price.innerHTML = product.price;
+    this.name.innerHTML = product.name;
+    this.addButton.onclick = () => this.addToCart(product);
+
+    appNode.appendChild(content);
+  }
+
+  addToCart(product) {
+  
+    const popUp = [];
+    popUp.push(product);
+    const li = document.createElement('li');
+    li.innerText = product.name + ' ' + product.price;
+    cartNode.appendChild(li);
+    
+  }
+}
+
+class Product {
+  constructor(name, imgSrc, price, priceTitle) {
+    this.name = name;
+    this.imgSrc = imgSrc;
+    this.price = price;
+    this.priceTitle = priceTitle;
+  }
+}
+//Add objects in class
+const product = new Product(
+  'Чайник классический',
+  'https://cdn.pixabay.com/photo/2018/07/15/17/43/the-brew-kettle-3540132_1280.png',
+  2990,
+  'Цена'
+);
+const product2 = new Product(
+  'Лампа настольная',
+  'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320603_1280.png',
+  2990,
+  'Цена'
+);
+const product3 = new Product(
+  'Чайник классический',
+  'https://cdn.pixabay.com/photo/2018/07/15/17/43/the-brew-kettle-3540132_1280.png',
+  2990,
+  'Цена'
+);
+const product4 = new Product(
+  'Лампа настольная',
+  'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320603_1280.png',
+  2990,
+  'Цена'
+);
+new Card(product);
+new Card(product2);
+new Card(product3);
+new Card(product4);
+const product5 = new Product(
+  'Чайник классический',
+  'https://cdn.pixabay.com/photo/2018/07/15/17/43/the-brew-kettle-3540132_1280.png',
+  2990,
+  'Цена'
+);
+const product6 = new Product(
+  'Лампа настольная',
+  'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320603_1280.png',
+  2990,
+  'Цена'
+);
+const product7 = new Product(
+  'Чайник классический',
+  'https://cdn.pixabay.com/photo/2018/07/15/17/43/the-brew-kettle-3540132_1280.png',
+  2990,
+  'Цена'
+);
+const product8 = new Product(
+  'Лампа настольная',
+  'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320603_1280.png',
+  2990,
+  'Цена'
+);
+new Card(product5);
+new Card(product6);
+new Card(product7);
+new Card(product8);
+
 const popUp = document.getElementById('popUp-part');
 let popupFailed = document.createElement('div');
 popupFailed.className = 'popupFailed';
@@ -111,7 +130,8 @@ function click_menu_basket() {
           </div>
         </div>
   `;
-  dataCards.forEach((temp) => {
+
+  /* dataCards.forEach((temp) => {
     const fieldPopUpInfo = document.querySelector('.popup-list');
     const templateForList = document.querySelector('#temp-list');
     const newList = templateForList.content.cloneNode(true);
@@ -121,6 +141,7 @@ function click_menu_basket() {
     listPrice.textContent = temp.price;
     fieldPopUpInfo.appendChild(newList);
   });
+  */
 }
 function click_close_menu_basket() {
   popUp.removeChild(popupFailed);
