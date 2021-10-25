@@ -54,8 +54,30 @@
         </div>
        
       </section>
-      <section class="popUp-section" id="popUp-part">
-        
+      <section class="popUp-section">
+        <template  id="popUp-part">
+          <div class="popup-bg" id="popup-block">
+            <div class="popup">
+              <div class="popup-top">
+                <h3>Корзина</h3>
+                <span
+                  id="popup-close"
+                  onclick="click_close_menu_basket()"
+                  style="cursor: pointer"
+                  >&#9746;</span
+                >
+              </div>
+              <div class="popup-list">
+                  <ul>
+                    <li class="popup-list-name">
+                    </li>
+                    <p class="popUp-price"></p>
+                 </ul>
+              </div>
+              <button class="popup-list-btn">Купить</button>
+            </div>
+          </div>
+        </template>
       </section>
     </main>
     <footer>

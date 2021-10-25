@@ -1,7 +1,7 @@
 const appNode = document.querySelector('.cards');
 
 const cartNode = document.querySelector('.popup-list');
-
+const dataCards = [];
 class Card {
   constructor(product) {
     const template = document.getElementById('card-temp');
@@ -23,9 +23,7 @@ class Card {
   }
 
   addToCart(product) {
-  
-    const popUp = [];
-    popUp.push(product);
+    dataCards.push(product);
     const li = document.createElement('li');
     li.innerText = product.name + ' ' + product.price;
     cartNode.appendChild(li);
@@ -104,44 +102,19 @@ let popupFailed = document.createElement('div');
 popupFailed.className = 'popupFailed';
 
 function click_menu_basket() {
-  popUp.appendChild(popupFailed);
-  popupFailed.innerHTML = `
-  <div class="popup-bg" id="popup-block">
-          <div class="popup">
-            <div class="popup-top">
-              <h3>Корзина</h3>
-              <span
-                id="popup-close"
-                onclick="click_close_menu_basket()"
-                style="cursor: pointer"
-                >&#9746;</span
-              >
-            </div>
-            <div class="popup-list">
-              <template id="temp-list">
-                <ul>
-                  <li class="popup-list-name">
-                  </li>
-                  <p class="popUp-price"></p>
-               </ul>
-              </template>
-            </div>
-            <button class="popup-list-btn">Купить</button>
-          </div>
-        </div>
-  `;
 
-  /* dataCards.forEach((temp) => {
-    const fieldPopUpInfo = document.querySelector('.popup-list');
-    const templateForList = document.querySelector('#temp-list');
+   dataCards.forEach((temp) => {
+    const fieldPopUpInfo = document.querySelector('.popUp-section');
+    const templateForList = document.querySelector('#popUp-part');
     const newList = templateForList.content.cloneNode(true);
+    console.log(newList);
     const listName = newList.querySelector('.popup-list-name');
     const listPrice = newList.querySelector('.popUp-price');
     listName.textContent = temp.name;
     listPrice.textContent = temp.price;
     fieldPopUpInfo.appendChild(newList);
   });
-  */
+  
 }
 function click_close_menu_basket() {
   popUp.removeChild(popupFailed);
