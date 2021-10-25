@@ -97,25 +97,31 @@ new Card(product6);
 new Card(product7);
 new Card(product8);
 
-const popUp = document.getElementById('popUp-part');
+const popUp = document.getElementById('#popUp-part');
 let popupFailed = document.createElement('div');
 popupFailed.className = 'popupFailed';
+const fieldPopUpInfo = document.querySelector('.popUp-section');
 
 function click_menu_basket() {
 
-   dataCards.forEach((temp) => {
-    const fieldPopUpInfo = document.querySelector('.popUp-section');
     const templateForList = document.querySelector('#popUp-part');
     const newList = templateForList.content.cloneNode(true);
     console.log(newList);
     const listName = newList.querySelector('.popup-list-name');
-    const listPrice = newList.querySelector('.popUp-price');
+
+    dataCards.forEach((temp) => {
+    /*const listPrice = newList.querySelector('.popUp-price');*/
+    const liNamePrice = document.createElement('li');
+    liNamePrice.innerText = temp.name + ' ' + temp.price;
+    listName.appendChild(liNamePrice);
+    /*
     listName.textContent = temp.name;
-    listPrice.textContent = temp.price;
-    fieldPopUpInfo.appendChild(newList);
+    listPrice.textContent = temp.price;*/
+  
   });
+  fieldPopUpInfo.appendChild(newList);
   
 }
 function click_close_menu_basket() {
-  popUp.removeChild(popupFailed);
+  fieldPopUpInfo.innerHTML = '';
 }
