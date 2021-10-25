@@ -26,7 +26,7 @@ class Card {
     dataCards.push(product);
     const li = document.createElement('li');
     li.innerText = product.name + ' ' + product.price;
-    cartNode.appendChild(li);
+    popupFailed.appendChild(li);
     
   }
 }
@@ -43,25 +43,25 @@ class Product {
 const product = new Product(
   'Чайник классический',
   'https://cdn.pixabay.com/photo/2018/07/15/17/43/the-brew-kettle-3540132_1280.png',
-  2990,
+  '2990₽',
   'Цена'
 );
 const product2 = new Product(
   'Лампа настольная',
   'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320603_1280.png',
-  2990,
+  '2990₽',
   'Цена'
 );
 const product3 = new Product(
-  'Чайник классический',
-  'https://cdn.pixabay.com/photo/2018/07/15/17/43/the-brew-kettle-3540132_1280.png',
-  2990,
+  'Ваза',
+  'https://cdn.pixabay.com/photo/2020/06/17/12/59/vase-5309392_1280.png',
+  '4699₽',
   'Цена'
 );
 const product4 = new Product(
-  'Лампа настольная',
-  'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320603_1280.png',
-  2990,
+  'Торшер',
+  'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320604_1280.png',
+  '1599₽',
   'Цена'
 );
 new Card(product);
@@ -69,26 +69,26 @@ new Card(product2);
 new Card(product3);
 new Card(product4);
 const product5 = new Product(
-  'Чайник классический',
-  'https://cdn.pixabay.com/photo/2018/07/15/17/43/the-brew-kettle-3540132_1280.png',
+  'Табурет',
+  'https://cdn.pixabay.com/photo/2017/09/26/21/28/folding-chair-2790167_1280.png',
   2990,
   'Цена'
 );
 const product6 = new Product(
-  'Лампа настольная',
-  'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320603_1280.png',
+  'Банка декоративная',
+  'https://cdn.pixabay.com/photo/2017/01/18/15/27/milk-can-1990081_1280.png',
   2990,
   'Цена'
 );
 const product7 = new Product(
-  'Чайник классический',
-  'https://cdn.pixabay.com/photo/2018/07/15/17/43/the-brew-kettle-3540132_1280.png',
+  'Шкатулка',
+  'https://cdn.pixabay.com/photo/2017/07/24/23/58/chest-2536477_1280.png',
   2990,
   'Цена'
 );
 const product8 = new Product(
-  'Лампа настольная',
-  'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320603_1280.png',
+  'Балдахин',
+  'https://cdn.pixabay.com/photo/2019/10/19/17/20/daybed-4561819_1280.png',
   2990,
   'Цена'
 );
@@ -112,7 +112,7 @@ function click_menu_basket() {
     dataCards.forEach((temp) => {
     /*const listPrice = newList.querySelector('.popUp-price');*/
     const liNamePrice = document.createElement('li');
-    liNamePrice.innerText = temp.name + ' ' + temp.price;
+    liNamePrice.innerText = temp.name + ' Цена - ' + temp.price;
     listName.appendChild(liNamePrice);
     /*
     listName.textContent = temp.name;

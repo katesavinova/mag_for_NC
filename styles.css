@@ -46,6 +46,7 @@
   background-color: #dfb729;
   color: wheat;
   font-size: 20px;
+  cursor: pointer;
 }
 header {
   display: flex;
@@ -123,9 +124,10 @@ li {
   overflow: scroll;
   height: 75%;
 }
-.popup-list ul {
+.popup-list ul li {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  word-spacing: 10%;
   margin: 5%;
   background-color: #cfcfcf23;
   border-radius: 10px;
@@ -144,6 +146,7 @@ li {
   background-color: #ffffff;
   color: #dfb729;
   font-size: 30px;
+  cursor: pointer;
 }
 .popup-list-btn:hover {
   background-color: #dfb729;
