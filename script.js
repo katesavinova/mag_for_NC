@@ -9,12 +9,10 @@ class Card {
 
     this.imgSrc = content.querySelector('.card-img-src');
     this.name = content.querySelector('.card-title');
-    this.priceTitle = content.querySelector('.price-title');
     this.price = content.querySelector('.price-title-price');
     this.addButton = content.querySelector('.card-info-btn');
 
     this.imgSrc.src = product.imgSrc;
-    this.priceTitle.innerHTML = product.priceTitle;
     this.price.innerHTML = product.price;
     this.name.innerHTML = product.name;
     this.addButton.onclick = () => this.addToCart(product);
@@ -32,37 +30,32 @@ class Card {
 }
 
 class Product {
-  constructor(name, imgSrc, price, priceTitle) {
+  constructor(name, imgSrc, price) {
     this.name = name;
     this.imgSrc = imgSrc;
     this.price = price;
-    this.priceTitle = priceTitle;
   }
 }
 //Add objects in class
 const product = new Product(
   'Чайник классический',
   'https://cdn.pixabay.com/photo/2018/07/15/17/43/the-brew-kettle-3540132_1280.png',
-  '2990₽',
-  'Цена'
+  '2990₽' 
 );
 const product2 = new Product(
   'Лампа настольная',
   'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320603_1280.png',
-  '2990₽',
-  'Цена'
+  '2990₽' 
 );
 const product3 = new Product(
   'Ваза',
   'https://cdn.pixabay.com/photo/2020/06/17/12/59/vase-5309392_1280.png',
-  '4699₽',
-  'Цена'
+  '4699₽' 
 );
 const product4 = new Product(
   'Торшер',
   'https://cdn.pixabay.com/photo/2017/05/17/11/20/table-lamp-2320604_1280.png',
-  '1599₽',
-  'Цена'
+  '1599₽' 
 );
 new Card(product);
 new Card(product2);
@@ -71,26 +64,22 @@ new Card(product4);
 const product5 = new Product(
   'Табурет',
   'https://cdn.pixabay.com/photo/2017/09/26/21/28/folding-chair-2790167_1280.png',
-  2990,
-  'Цена'
+  2990 
 );
 const product6 = new Product(
   'Банка декоративная',
   'https://cdn.pixabay.com/photo/2017/01/18/15/27/milk-can-1990081_1280.png',
-  2990,
-  'Цена'
+  2990 
 );
 const product7 = new Product(
   'Шкатулка',
   'https://cdn.pixabay.com/photo/2017/07/24/23/58/chest-2536477_1280.png',
-  2990,
-  'Цена'
+  2990 
 );
 const product8 = new Product(
   'Балдахин',
   'https://cdn.pixabay.com/photo/2019/10/19/17/20/daybed-4561819_1280.png',
-  2990,
-  'Цена'
+  2990 
 );
 new Card(product5);
 new Card(product6);
